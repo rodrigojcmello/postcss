@@ -1,0 +1,14 @@
+@import "../variable.sss"
+
+.accordion > div
+    display: none
+
+.accordion > div.title
+    border-bottom: 1px solid $color2
+    color: $color1
+    display: block
+    height: 14vw
+    line-height: 14vw
+
+.accordion > div.title.open + div
+    display: block

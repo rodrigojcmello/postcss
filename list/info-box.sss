@@ -1,0 +1,26 @@
+@import "../variable.sss"
+
+.info-box > div
+    padding-bottom: 1.5vw
+    padding-left: 2.5vw
+    padding-right: 2.5vw
+    padding-top: 2.5vw
+
+.info-box > div
+    &:nth-child(1), &:nth-child(2)
+        border-bottom: 1px solid color($color1 a(20%))
+
+.info-box > div
+    &:nth-child(1), &:nth-child(3)
+        border-right: 1px solid color($color1 a(20%))
+
+.info-box > div > div:first-child
+    color: $color1
+    font-size: 12px
+    text-align: center
+
+.info-box > div > div:last-child
+    color: color(black a(70%))
+    font-size: 6vw
+    line-height: 30px
+    text-align: center

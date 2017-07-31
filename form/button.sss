@@ -1,0 +1,98 @@
+@import "../variable.sss"
+
+.btn
+    background: white
+    border-radius: 4px
+    border: none
+    box-shadow: inset 0 0 0 1px color($color1 a(20%))
+    color: $color1
+    display: block
+    font-size: 4vw
+    height: 10vw
+    line-height: 10vw
+    padding: 0
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    width: 100%
+
+.btn.lg
+    height: 12.5vw
+    line-height: 12.5vw
+
+.btn:focus
+    outline: none
+
+// With Icon -----------------------------------------------------------------------------------------------------------
+
+.btn.with-icon i
+    display: block
+    float: left
+    font-size: 8vw
+    &:last-child
+        font-size: 4vw
+        opacity: 0.3
+
+.btn.with-icon
+    i, i:before
+        height: 10vw
+        line-height: 10vw
+        width: 10vw
+
+.btn.with-icon span
+    float: left
+    width: calc(100% - 20vw)
+
+// With Left Icon
+.btn.with-icon.left-icon span
+    margin-left: 10vw
+
+.btn.with-icon.left-icon i
+    opacity: 1
+    font-size: 8vw
+
+// Big -----------------------------------------------------------------------------------------------------------------
+
+.btn.lg
+    height: 15vw
+    line-height: 15vw
+
+.btn.lg.with-icon
+    i, i:before
+        height: 15vw
+        line-height: 15vw
+        width: 15vw
+
+.btn.lg.with-icon span
+    width: calc(100% - 30vw)
+
+.btn.lg.with-icon.left-icon span
+    margin-left: 15vw
+
+// Filled --------------------------------------------------------------------------------------------------------------
+
+.btn.filled
+    background-color: $color1
+    color: white
+
+.btn.filled.alt
+    background-color: $color2
+
+// Facebook ------------------------------------------------------------------------------------------------------------
+
+.btn.facebook
+    background-color: white
+    box-shadow: inset 0 0 0 1px color(#3b5998 a(30%))
+    color: #3b5998
+
+// Big -----------------------------------------------------------------------------------------------------------------
+
+.btn.big
+    line-height: 15vw
+    height: 15vw
+
+// Clear ---------------------------------------------------------------------------------------------------------------
+
+.btn.clear
+    box-shadow: none
+    font-size: 3vw

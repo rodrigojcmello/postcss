@@ -1,0 +1,27 @@
+@import "../variable.sss"
+
+.col
+    float: left
+    width: 100%
+
+@for $i from 1 to 12
+    $with: calc($(i) / 12 * 100)%
+    .col.xs-$i
+        width: $with
+    .col.offset-xs-$i
+        margin-left: $with
+    @media(min-width: 768px) // SM
+        .col.sm-$i
+            width: $with
+        .col.offset-sm-$i
+            margin-left: $with
+    @media(min-width: 1024px) // MD
+        .col.md-$i
+            width: $with
+        .col.offset-md-$i
+            margin-left: $with
+    @media(min-width: 1400px) // LG
+        .col.lg-$i
+            width: $with
+        .col.offset-lg-$i
+            margin-left: $with

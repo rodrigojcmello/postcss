@@ -1,0 +1,167 @@
+@import "../variable.sss"
+
+// Fieldset ------------------------------------------------------------------------------------------------------------
+
+fieldset
+    border: none
+    margin: 0
+    padding: 0
+
+legend, .legend
+    background-color: color(black a(3%))
+    border-bottom: 1px solid color(black a(3%))
+    border-top: 1px solid color(black a(3%))
+    color: $color2
+    font-size: 3vw
+    font-weight: 400
+    line-height: 4vw
+    margin-bottom: 0
+    margin-top: 0
+    padding-bottom: 2.5vw
+    padding-top: 2.5vw
+    text-transform: uppercase
+    width: 100%
+    &.lg
+        font-size: 4vw
+        line-height: 6vw
+
+legend, .legend
+    a
+        color: $color1
+        float: right
+
+// Label ---------------------------------------------------------------------------------------------------------------
+
+label
+    color: $color1
+    display: block
+    font-size: 10px
+    height: 10px
+    line-height: 10px
+
+// Field ---------------------------------------------------------------------------------------------------------------
+
+.field
+    position: relative
+
+.field
+    input, textarea, select
+        background-color: white
+        border-bottom: 1px solid color(black a(10%))
+        border-left: none
+        border-radius: 0
+        border-right: none
+        border-top: none
+        font-size: 4vw
+        height: 10vw
+        padding: 0 3vw
+        transition: border 0.4s
+        width: 100%
+        @media (min-width: 425px)
+            font-size: 17px
+            height: 42.5px
+
+.field textarea
+    transition: height .4s
+    line-height: 10vw
+    &:focus
+        padding-top: 2.5vw
+        line-height: 5vw
+        height: 30vw
+
+.field
+    input, textarea, select
+        &:focus
+            border-color: $color1
+            outline: none
+
+.field
+    input, textarea, select
+        &::placeholder
+            color: color(black a(20%))
+
+// Icon ----------------------------------------------------------------------------------------------------------------
+
+.field.with-icon i
+    color: $color1
+    font-size: 6vw
+    height: 10vw
+    left: 0
+    line-height: 10vw
+    position: absolute
+    text-align: center
+    top: 0
+    width: 10vw
+    @media (min-width: 425px)
+        font-size: 25.5px
+        height: 42.5px
+        line-height: 42.5px
+        width: 42.5px
+
+.field.with-icon input
+    padding-left: 10vw
+
+// Double Input
+
+.field input + input
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+
+//----------------------------------------------------------------------------------------------------------------------
+// Button Checkbox
+//----------------------------------------------------------------------------------------------------------------------
+
+.btn-group .btn.active
+    background-color: $color1
+    color: white
+
+.btn-group label
+    border-radius: 0
+
+.btn-group input
+    clip: rect(0, 0, 0, 0)
+    pointer-events: none
+    position: absolute
+
+// Radio ---------------------------------------------------------------------------------------------------------------
+
+/*.field .field-box
+    padding: 2.5vw*/
+
+.field .field-box:after
+    clear: both
+    content: ""
+    display: block
+
+.field .label-box
+    border-bottom: 1px solid color(black a(5%))
+    float: left
+    min-height: 12vw
+    width: calc(100% - 12vw)
+
+.field .label-box label
+    font-size: 4vw
+    height: auto
+    line-height: 5vw
+    margin-bottom: 3.5vw
+    margin-right: 3.5vw
+    margin-top: 3.5vw
+    color: color(black lightness(30%))
+
+.field
+    input[type='radio'], input[type='checkbox']
+        float: left
+        height: 4vw
+        margin: 4vw
+        padding: 0
+        width: 4vw
+
+.field
+    input[type='radio'], input[type='checkbox']
+        &:checked + .label-box > .hidden-field
+            display: block
+
+.hidden-field
+    display: none

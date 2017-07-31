@@ -1,0 +1,170 @@
+@import "../variable.sss"
+
+//----------------------------------------------------------------------------------------------------------------------
+// Top Bar
+//----------------------------------------------------------------------------------------------------------------------
+
+.navbar.top
+    background: white
+    box-shadow: 0 1px 0 0 color(black a(10%))
+    height: 14vw
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 1
+    &.no-shadow
+        box-shadow: none
+    @media (min-width: 457px)
+        height: 64px
+
+
+
+// Icon ----------------------------------------------------------------------------------------------------------------
+
+.navbar.top a.icon
+    color: $color1
+    display: block
+    text-decoration: none
+    width: 14vw
+
+.navbar.top a.icon i:before
+    display: block
+    font-size: 7vw
+    height: 14vw
+    line-height: 14vw
+    text-align: center
+    width: 14vw
+
+.navbar.top a.icon.right
+    float: right
+
+// Image ---------------------------------------------------------------------------------------------------------------
+
+.navbar.top .box-img
+    left: 0
+    position: absolute
+    text-align: center
+    top: 2vw
+    width: 100%
+    z-index: -1
+
+.navbar.top .box-img img
+    height: 10vw
+    width: auto
+
+// Heading -------------------------------------------------------------------------------------------------------------
+
+.navbar.top h1
+    color: $color2
+    font-size: 4vw
+    font-weight: 400
+    height: 14vw
+    left: 14vw
+    line-height: 14vw
+    margin: 0
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    top: 0
+    width: calc(100% - (14vw * 2))
+
+// Content -------------------------------------------------------------------------------------------------------------
+
+.content
+    position: relative
+
+.navbar.top + .content
+    height: calc(100vh - 14vw)
+    left: 0
+    overflow: scroll
+    position: absolute
+    top: 14vw
+    width: 100%
+    @media (min-width: 457px)
+        height: calc(100vh - 64px)
+        top: 64px
+
+.content:after
+    clear: both
+    content: ""
+    display: table
+
+.navbar.top + .content.with-bottom
+    height: calc(100vh - 14vw - 15vw)
+
+// Bottom --------------------------------------------------------------------------------------------------------------
+
+.navbar.bottom
+    background: white
+    bottom: 0
+    box-shadow: 0 -1px 0 0 color(black a(10%))
+    height: 15vw
+    left: 0
+    position: absolute
+    width: 100%
+    z-index: 1
+
+.navbar.bottom a
+    color: $color2
+    float: left
+    text-decoration: none
+
+.navbar.bottom a i
+    display: block
+    font-size: 8.5vw
+    height: 8vw
+    line-height: 8.5vw
+    margin-top: 1.5vw
+    text-align: center
+    width: 100%
+
+.navbar.bottom a div
+    font-size: 2.3vw
+    height: 5vw
+    line-height: 5vw
+    text-align: center
+
+.navbar.bottom.four-icons a
+    width: calc(100% / 4)
+
+// Content ---------------------------------------------------------------------
+
+.content.with-bottom
+    overflow: scroll
+    height: calc(100vh - 15vw)
+
+.navbar.top .content.with-bottom
+    height: calc(100vh - 14vw - 15vw)
+
+// Field -----------------------------------------------------------------------
+
+.navbar.bottom .field
+    padding: 2.5vw
+
+.navbar.bottom .field .icon
+    background: none
+    border: none
+    margin-right: 2.5vw
+    padding: 0
+    position: absolute
+    right: 0
+
+/*.navbar.bottom .field .icon:nth-child(1)*/
+
+.navbar.bottom .field .icon i
+    display: block
+    font-size: 6vw
+    height: 10vw
+    line-height: 10vw
+    text-align: center
+    width: 10vw
+
+// Button --------------------------------------------------------------------------------------------------------------
+
+.navbar.bottom .btn
+    border-radius: 0
+    box-shadow: none
+    color: white
+    height: 15vw
+    line-height: 15vw

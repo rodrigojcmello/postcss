@@ -1,0 +1,101 @@
+@import "../variable.sss"
+
+/* v0.0.2 */
+
+ul.chat-list
+    height: 100%
+    margin-bottom: 0
+    margin-top: 0
+    overflow: scroll
+    padding-left: 0
+    padding: 2.5vw
+
+ul.chat-list > li
+    list-style: none
+
+ul.chat-list > li:after
+    clear: both
+    content: ""
+    display: table
+
+ul.chat-list > li > div
+    background-color: $color1
+    border-radius: 1vw
+    color: white
+    display: inline-block
+    line-height: 20px
+    list-style: none
+    margin-bottom: 9px
+    max-width: 75%
+    padding: 2.5vw
+    width: auto
+
+ul.chat-list > li:first-child > div
+    margin-top: 1px
+
+ul.chat-list > li:last-child > div
+    margin-bottom: 1px
+
+ul.chat-list > li.-right > div
+    float: right
+
+ul.chat-list > li.-color-1 > div
+    background-color: white
+    border: 1px solid color($color1 lightness(85%))
+    color: $color1
+
+ul.chat-list > li > div .-text
+    float: left
+
+ul.chat-list > li > div .-when
+    float: right
+    font-size: 10px
+    margin-left: 12px
+    opacity: 0.4
+
+ul.chat-list > li > img
+    border-radius: 19px
+    float: left
+    height: 38px
+    margin-right: 8px
+    width: 38px
+
+ul.chat-list > li.-right > img
+    float: right
+    margin-left: 8px
+    margin-right: 0
+
+// -----------------------------------------------------------------------------
+
+ul.chat-list .type-list-1
+    padding-left: 0
+
+ul.chat-list .type-list-1 li
+    border-bottom: 1px solid color($color1 a(30%))
+    list-style: none
+    padding-bottom: 5vw
+
+ul.chat-list .type-list-1 .title
+    font-size: 4vw
+    font-weight: bold
+
+ul.chat-list .type-list-1 li .title
+    margin-top: 2.5vw
+
+ul.chat-list .type-list-1 li:first-child .title
+    margin-top: 0
+
+ul.chat-list .type-list-1 .description
+    font-size: 3vw
+    color: color(black lightness(70%))
+
+
+ul.chat-list .type-list-1 .image
+    display: inline-block
+    border: 1px solid color($color1 a(30%))
+    margin-top: 1.5vw
+    border-radius: 1vw
+
+ul.chat-list .type-list-1 .image img
+    height: auto
+    width: 100%
